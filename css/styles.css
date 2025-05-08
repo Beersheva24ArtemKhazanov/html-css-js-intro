@@ -100,6 +100,30 @@ h2 {
   white-space: wrap
 }
 
+.hidden .detailedFrame {
+  display: none
+}
+.hidden .gallery {
+  margin-top:5vh;
+  max-height: 80vh;
+
+
+}
+
+.cross-btn {
+  background-image: url('../images/xmark-solid.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+  cursor: pointer;
+
+}
+
 @media screen and (min-width: 500px) {
   .main {
     flex-direction: row-reverse;
@@ -137,6 +161,20 @@ h2 {
     background-color: aliceblue;
     text-align: center;
   }
+  .hidden.main {
+    justify-content: center;
+  }
+  .hidden .gallery {
+    display: grid;
+    column-gap: 5vw;
+    grid-template-columns: repeat(4, 1fr);
+    margin-right: 1.3vw;
+  
+  
+  }
+
+  
+
 }
 @media screen and (min-width: 1000px) {
   
@@ -190,5 +228,13 @@ h2 {
   }
   .logo {
     font-size: 4rem;
+  }
+  .hidden .gallery {
+    display: grid;
+    column-gap: 5vw;
+    grid-template-columns: repeat(3, 1fr);
+    margin-right: 1.3vw;
+  
+  
   }
 }
