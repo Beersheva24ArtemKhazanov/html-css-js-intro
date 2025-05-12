@@ -1,5 +1,7 @@
+import NoQueryService from "./NoQueryService.js";
+
 //{thumbnailImg: string, detailedImg: string; thumbnailTitle: string; detailedTitle: string}
-class MockService {
+class MockService extends NoQueryService{
     getData() {
         const dataStr = 'abcdefghijoprstklmn';
         return Promise.resolve(Array.from(dataStr).map(l =>( {
@@ -10,5 +12,5 @@ class MockService {
         })))
     }
 }
-const serviceObj = new MockService();
-export default serviceObj;
+// const serviceObj = new MockService();
+// export default serviceObj;

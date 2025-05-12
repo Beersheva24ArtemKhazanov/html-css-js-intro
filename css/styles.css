@@ -16,11 +16,43 @@ h2 {
   animation: backInRight;
   animation-duration: 2s;
 }
+.queryForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 40vh;
+  margin-left: 30vw;
+}
+.queryForm_input {
+  width: 40%
+}
+.input-buttons {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  padding: 4px 15px;
+  border-radius: 20%;
+  border: 1px solid lightgray
+}
+.btn-prev {
+  position: absolute;
+  bottom: 10px;
+  left:0
+}
+.btn-next {
+  position: absolute;
+  bottom: 10px;
+  right:0
+}
+
 .main {
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
+
 .detailedFrame {
   flex-grow: 1;
   display: flex;
@@ -109,19 +141,24 @@ h2 {
 
 
 }
-
-.cross-btn {
-  background-image: url('../images/xmark-solid.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 2.5rem;
-  height: 2.5rem;
+.none {
+  display: none;
+}
+#hidingButton {
+  fill: red;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 0;
   position: absolute;
-  top: -3rem;
-  right: -3rem;
-  cursor: pointer;
-
+  top: 0.5rem;
+  right: 0.5rem;
+}
+#button_query {
+  position: absolute;
+  top:10vh;
+  left:0;
+  z-index: 2;
 }
 
 @media screen and (min-width: 500px) {
@@ -162,7 +199,8 @@ h2 {
     text-align: center;
   }
   .hidden.main {
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .hidden .gallery {
     display: grid;

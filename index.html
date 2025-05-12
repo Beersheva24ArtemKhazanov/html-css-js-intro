@@ -5,35 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>gallery</title>
   </head>
   <body>
     <header>
       <h2 class="logo">Gallery</h2>
     </header>
-    <main class="main hidden">
+    <button class="btn none" id="button_query">Query</button>
+    <section id="form_section"></section>
+    <main class="main hidden none">
       <section class="detailedFrame">
         <figure class="detailedContainer">
-          <img
-            src=""
-            alt=""
-            class="detailedContainer_image animation-left"
-          />
+          <img src="" alt="" class="detailedContainer_image animation-left" />
 
-          <figcaption class="detailedContainer_title animation-right">
-           
-          </figcaption>
-          <button id="hidingButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-            <path  d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
+          <figcaption
+            class="detailedContainer_title animation-right"
+          ></figcaption>
+          <button id="hidingButton">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+              <path
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+              />
+            </svg>
+          </button>
         </figure>
       </section>
-      <ul class="gallery">
-        
-       
-      </ul>
+
+      <ul class="gallery"></ul>
+
+      <button class="btn btn-prev none">prev</button>
+      <button class="btn btn-next none">next</button>
     </main>
     <script src="src/main.js" type="module"></script>
   </body>
