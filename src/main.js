@@ -1,31 +1,5 @@
-//refernces to the HTML elements
-const mainContainer = document.querySelector(".main");
-const galleryItems = document.querySelectorAll(".gallery_item");
-const detailedContainerImage = document.querySelector(".detailedContainer_image");
-const detailedContainerTitle = document.querySelector(".detailedContainer_title");
-//functions
-function setDetails(itemElement) {
-    detailedContainerImage.src = itemElement.getAttribute("data-detailed-image");
-    detailedContainerTitle.innerHTML = itemElement.getAttribute("data-detailed-title");
-    mainContainer.classList.remove("hidden");
-    animate();
-}
-function closeWindow() {
-    mainContainer.classList.add("hidden");
-}
-function animate() {
-    detailedContainerImage.classList.remove("animation-left");
-    detailedContainerTitle.classList.remove("animation-right");
-    setTimeout(addAnimationClasses);
-    
-}
-function toggleAnimations(element) {
-    element.classList.toggle("animation-left");
-    element.classList.toggle("animation-right"); 
-}
-function addAnimationClasses() {
-    detailedContainerImage.classList.add("animation-left");
-    detailedContainerTitle.classList.add("animation-right"); 
-}
-//actions
-galleryItems.forEach((item,index) => item.addEventListener("click", () => setDetails(galleryItems[index])));
+import RateComponent from "./RateComponent.js";
+
+const parent = document.getElementById("rate");
+const rating = new RateComponent(100);
+rating.render(parent, 50);
